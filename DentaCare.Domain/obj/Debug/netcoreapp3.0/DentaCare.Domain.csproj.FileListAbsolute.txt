@@ -1,0 +1,17 @@
+C:\Users\Milutin\source\repos\DentaCare\DentaCare.Domain\bin\Debug\netcoreapp3.0\DentaCare.Domain.deps.json
+C:\Users\Milutin\source\repos\DentaCare\DentaCare.Domain\bin\Debug\netcoreapp3.0\DentaCare.Domain.dll
+C:\Users\Milutin\source\repos\DentaCare\DentaCare.Domain\bin\Debug\netcoreapp3.0\DentaCare.Domain.pdb
+C:\Users\Milutin\source\repos\DentaCare\DentaCare.Domain\obj\Debug\netcoreapp3.0\DentaCare.Domain.csprojAssemblyReference.cache
+C:\Users\Milutin\source\repos\DentaCare\DentaCare.Domain\obj\Debug\netcoreapp3.0\DentaCare.Domain.AssemblyInfoInputs.cache
+C:\Users\Milutin\source\repos\DentaCare\DentaCare.Domain\obj\Debug\netcoreapp3.0\DentaCare.Domain.AssemblyInfo.cs
+C:\Users\Milutin\source\repos\DentaCare\DentaCare.Domain\obj\Debug\netcoreapp3.0\DentaCare.Domain.dll
+C:\Users\Milutin\source\repos\DentaCare\DentaCare.Domain\obj\Debug\netcoreapp3.0\DentaCare.Domain.pdb
+C:\Users\Milutin\source\repos\DentaCare\DentaCare.Domain\obj\Debug\netcoreapp3.0\DentaCare.Domain.csproj.CoreCompileInputs.cache
+D:\xamp\usera\source\repos\DentaCare\DentaCare.Domain\bin\Debug\netcoreapp3.0\DentaCare.Domain.deps.json
+D:\xamp\usera\source\repos\DentaCare\DentaCare.Domain\bin\Debug\netcoreapp3.0\DentaCare.Domain.dll
+D:\xamp\usera\source\repos\DentaCare\DentaCare.Domain\bin\Debug\netcoreapp3.0\DentaCare.Domain.pdb
+D:\xamp\usera\source\repos\DentaCare\DentaCare.Domain\obj\Debug\netcoreapp3.0\DentaCare.Domain.csprojAssemblyReference.cache
+D:\xamp\usera\source\repos\DentaCare\DentaCare.Domain\obj\Debug\netcoreapp3.0\DentaCare.Domain.AssemblyInfoInputs.cache
+D:\xamp\usera\source\repos\DentaCare\DentaCare.Domain\obj\Debug\netcoreapp3.0\DentaCare.Domain.AssemblyInfo.cs
+D:\xamp\usera\source\repos\DentaCare\DentaCare.Domain\obj\Debug\netcoreapp3.0\DentaCare.Domain.dll
+D:\xamp\usera\source\repos\DentaCare\DentaCare.Domain\obj\Debug\netcoreapp3.0\DentaCare.Domain.pdb

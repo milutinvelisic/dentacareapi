@@ -1,0 +1,10 @@
+C:\Users\Milutin\source\repos\DentaCare\DentaCareDataAccess\bin\Debug\netcoreapp3.0\DentaCare.DataAccess.deps.json
+C:\Users\Milutin\source\repos\DentaCare\DentaCareDataAccess\bin\Debug\netcoreapp3.0\DentaCare.DataAccess.runtimeconfig.json
+C:\Users\Milutin\source\repos\DentaCare\DentaCareDataAccess\bin\Debug\netcoreapp3.0\DentaCare.DataAccess.runtimeconfig.dev.json
+C:\Users\Milutin\source\repos\DentaCare\DentaCareDataAccess\bin\Debug\netcoreapp3.0\DentaCare.DataAccess.dll
+C:\Users\Milutin\source\repos\DentaCare\DentaCareDataAccess\bin\Debug\netcoreapp3.0\DentaCare.DataAccess.pdb
+C:\Users\Milutin\source\repos\DentaCare\DentaCareDataAccess\obj\Debug\netcoreapp3.0\DentaCare.DataAccess.csprojAssemblyReference.cache
+C:\Users\Milutin\source\repos\DentaCare\DentaCareDataAccess\obj\Debug\netcoreapp3.0\DentaCare.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Milutin\source\repos\DentaCare\DentaCareDataAccess\obj\Debug\netcoreapp3.0\DentaCare.DataAccess.AssemblyInfo.cs
+C:\Users\Milutin\source\repos\DentaCare\DentaCareDataAccess\obj\Debug\netcoreapp3.0\DentaCare.DataAccess.dll
+C:\Users\Milutin\source\repos\DentaCare\DentaCareDataAccess\obj\Debug\netcoreapp3.0\DentaCare.DataAccess.pdb

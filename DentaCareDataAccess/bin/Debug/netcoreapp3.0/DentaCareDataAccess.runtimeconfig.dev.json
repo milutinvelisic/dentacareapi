@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\ekono\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ekono\\.nuget\\packages"
+    ]
+  }
+}
