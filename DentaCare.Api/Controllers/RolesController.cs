@@ -73,14 +73,6 @@ namespace DentaCare.Api.Controllers
             [FromServices] ICreateRoleCommand command,
             [FromServices] CreateRoleValidator validator)
         {
-
-            //var result = validator.Validate(dto);
-
-            //if (!result.IsValid)
-            //{
-            //    throw new Exception();// prepraviti sa klasom error
-            //}
-
             _executor.ExecuteCommand(command, dto);
         }
 

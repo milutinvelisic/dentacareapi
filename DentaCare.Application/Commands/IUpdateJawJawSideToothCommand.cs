@@ -5,7 +5,7 @@ using DentaCare.Application.DataTransfer;
 
 namespace DentaCare.Application.Commands
 {
-    public interface IDeleteJawSideToothCommand : ICommand<int>
+    public interface IUpdateJawJawSideToothCommand : ICommand<JawJawSideToothDto>
     {
     }
 }

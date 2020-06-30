@@ -5,7 +5,9 @@ using AutoMapper;
 using DentaCare.Application.Commands;
 using DentaCare.Application.DataTransfer;
 using DentaCare.Domain;
+using DentaCare.Implementation.Validators;
 using DentaCareDataAccess;
+using FluentValidation;
 
 namespace DentaCare.Implementation.Commands
 {
@@ -13,11 +15,13 @@ namespace DentaCare.Implementation.Commands
     {
         private readonly DentaCareContext _context;
         private readonly IMapper _mapper;
+        private readonly CreateAppointmentValidator _validator;
 
-        public EfCreateAppointmentCommand(DentaCareContext context, IMapper mapper)
+        public EfCreateAppointmentCommand(DentaCareContext context, IMapper mapper, CreateAppointmentValidator validator)
         {
             this._context = context;
             this._mapper = mapper;
+            this._validator = validator;
         }
         public int Id => 7;
 
@@ -25,6 +29,8 @@ namespace DentaCare.Implementation.Commands
 
         public void Execute(AppointmentDto request)
         {
+            _validator.ValidateAndThrow(request);
+
             var appointment = new Appointment
             {
                 FirstNameLastName = request.FirstNameLastName,
@@ -34,7 +40,7 @@ namespace DentaCare.Implementation.Commands
                 Time = request.Time
             };
 
-            //_mapper.Map<Appointment>(request);
+            //var appointment = _mapper.Map<Appointment>(request);
 
             _context.Appointments.Add(appointment);
             _context.SaveChanges();

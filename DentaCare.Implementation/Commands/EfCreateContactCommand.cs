@@ -5,19 +5,21 @@ using AutoMapper;
 using DentaCare.Application.Commands;
 using DentaCare.Application.DataTransfer;
 using DentaCare.Domain;
+using DentaCare.Implementation.Validators;
 using DentaCareDataAccess;
+using FluentValidation;
 
 namespace DentaCare.Implementation.Commands
 {
     public class EfCreateContactCommand : ICreateContactCommand
     {
         private readonly DentaCareContext _context;
-        private readonly IMapper _mapper;
+        private readonly CreateContactValidator _validator;
 
-        public EfCreateContactCommand(DentaCareContext context, IMapper mapper)
+        public EfCreateContactCommand(DentaCareContext context, CreateContactValidator validator)
         {
             this._context = context;
-            this._mapper = mapper;
+            this._validator = validator;
         }
         public int Id => 8;
 
@@ -25,6 +27,8 @@ namespace DentaCare.Implementation.Commands
 
         public void Execute(ContactDto request)
         {
+            _validator.ValidateAndThrow(request);
+
             var contact = new Contact
             {
                 Address = request.Address,

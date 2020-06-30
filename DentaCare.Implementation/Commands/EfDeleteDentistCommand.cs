@@ -4,6 +4,7 @@ using System.Text;
 using DentaCare.Application.Commands;
 using DentaCare.Application.Exceptions;
 using DentaCare.Domain;
+using DentaCare.Implementation.Validators;
 using DentaCareDataAccess;
 
 namespace DentaCare.Implementation.Commands
@@ -11,10 +12,12 @@ namespace DentaCare.Implementation.Commands
     public class EfDeleteDentistCommand : IDeleteDentistCommand
     {
         private readonly DentaCareContext _context;
+        private readonly CreateDentistValidator _validator;
 
-        public EfDeleteDentistCommand(DentaCareContext context)
+        public EfDeleteDentistCommand(DentaCareContext context, CreateDentistValidator validator)
         {
             this._context = context;
+            this._validator = validator;
         }
         public int Id => 19;
 

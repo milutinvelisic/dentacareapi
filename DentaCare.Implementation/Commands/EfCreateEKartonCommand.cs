@@ -5,19 +5,21 @@ using AutoMapper;
 using DentaCare.Application.Commands;
 using DentaCare.Application.DataTransfer;
 using DentaCare.Domain;
+using DentaCare.Implementation.Validators;
 using DentaCareDataAccess;
+using FluentValidation;
 
 namespace DentaCare.Implementation.Commands
 {
     public class EfCreateEKartonCommand : ICreateEKartonCommand
     {
         private readonly DentaCareContext _context;
-        private readonly IMapper _mapper;
+        private readonly CreateEKartonValidator _validator;
 
-        public EfCreateEKartonCommand(DentaCareContext context, IMapper mapper)
+        public EfCreateEKartonCommand(DentaCareContext context, CreateEKartonValidator validator)
         {
             this._context = context;
-            this._mapper = mapper;
+            this._validator = validator;
         }
         public int Id => 10;
 
@@ -25,6 +27,8 @@ namespace DentaCare.Implementation.Commands
 
         public void Execute(EKartonDto request)
         {
+            _validator.ValidateAndThrow(request);
+
             var ekarton = new EKarton
             {
                 Date = request.Date,

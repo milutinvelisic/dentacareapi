@@ -8,11 +8,11 @@ using DentaCareDataAccess;
 
 namespace DentaCare.Implementation.Commands
 {
-    public class EfCreateJawSideToothCommand : ICreateJawSideToothCommand
+    public class EfCreateJawJawSideToothCommand : ICreateJawJawSideToothCommand
     {
         private readonly DentaCareContext _context;
 
-        public EfCreateJawSideToothCommand(DentaCareContext context)
+        public EfCreateJawJawSideToothCommand(DentaCareContext context)
         {
             this._context = context;
         }

@@ -20,6 +20,6 @@ namespace DentaCare.Application.DataTransfer
 
         public virtual ServiceTypeDto ServiceTypes { get; set; }
 
-        public int? ServiceTypeId { get; set; }
+        public int ServiceTypeId { get; set; }
     }
 }

@@ -40,10 +40,54 @@ namespace DentaCare.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<DentaCareContext>();
-            services.AddTransient<ICreateRoleCommand, EfCreateRoleCommand>();// ili RawSqlCreateRoleCommand
-            services.AddTransient<IDeleteRoleCommand, EfDeleteRoleCommand>();
+            services.AddTransient<ICreateRoleCommand, EfCreateRoleCommand>();
+            services.AddTransient<ICreateAppointmentCommand, EfCreateAppointmentCommand>();
+            services.AddTransient<ICreateContactCommand, EfCreateContactCommand>();
+            services.AddTransient<ICreateDentistCommand, EfCreateDentistCommand>();
+            services.AddTransient<ICreateEKartonCommand, EfCreateEKartonCommand>();
+            services.AddTransient<ICreateJawCommand, EfCreateJawCommand>();
+            services.AddTransient<ICreateJawSideCommand, EfCreateJawSideCommand>();
+            services.AddTransient<ICreateJawJawSideToothCommand, EfCreateJawJawSideToothCommand>();
+            services.AddTransient<ICreateToothCommand, EfCreateTeethCommand>();
+            services.AddTransient<ICreateServiceTypeCommand, EfCreateServiceTypeCommand>();
             services.AddTransient<ICreateUserCommand, EfCreateUserCommand>();
+
+            services.AddTransient<IDeleteRoleCommand, EfDeleteRoleCommand>();
+            services.AddTransient<IDeleteAppointmentCommand, EfDeleteAppointmentCommand>();
+            services.AddTransient<IDeleteContactCommand, EfDeleteContactCommand>();
+            services.AddTransient<IDeleteDentistCommand, EfDeleteDentistCommand>();
+            services.AddTransient<IDeleteJawCommand, EfDeleteJawCommand>();
+            services.AddTransient<IDeleteJawSideCommand, EfDeleteJawSideCommand>();
+            services.AddTransient<IDeleteJawJawSideToothCommand, EfDeleteJawJawSideToothCommand>();
+            services.AddTransient<IDeleteToothCommand, EfDeleteTeethCommand>();
+            services.AddTransient<IDeleteServiceTypeCommand, EfDeleteServiceTypeCommand>();
+            services.AddTransient<IDeleteEKartonCommand, EfDeleteEKartonCommand>();
+            services.AddTransient<IDeleteUserCommand, EfDeleteUserCommand>();
+
             services.AddTransient<IGetRoleQuery, EfGetRolesQuery>();
+            services.AddTransient<IGetAppointmentQuery, EfGetAppointmentQuery>();
+            services.AddTransient<IGetDentistQuery, EfGetDentistQuery>();
+            services.AddTransient<IGetEKartonQuery, EfGetEKartonQuery>();
+            services.AddTransient<IGetJawQuery, EfGetJawQuery>();
+            services.AddTransient<IGetJawSideQuery, EfGetJawSideQuery>();
+            services.AddTransient<IGetServiceTypeQuery, EfGetServiceTypeQuery>();
+            services.AddTransient<IGetTeethQuery, EfGetTeethQuery>();
+            services.AddTransient<IGetUserQuery, EfGetUsersQuery>();
+            services.AddTransient<IGetContactQuery, EfGetContactQuery>();
+
+            services.AddTransient<IUpdateAppointmentCommand, EfUpdateAppointmentCommand>();
+            services.AddTransient<IUpdateContactCommand, EfUpdateContactCommand>();
+            services.AddTransient<IUpdateDentistCommand, EfUpdateDentistCommand>();
+            services.AddTransient<IUpdateEKartonCommand, EfUpdateEKartonCommand>();
+            services.AddTransient<IUpdateJawCommand, EfUpdateJawCommand>();
+            services.AddTransient<IUpdateJawSideCommand, EfUpdateJawSideCommand>();
+            services.AddTransient<IUpdateJawJawSideToothCommand, EfUpdateJawJawSideToothCommand>();
+            services.AddTransient<IUpdateToothCommand, EfUpdateTeethCommand>();
+            services.AddTransient<IUpdateServiceTypeCommand, EfUpdateServiceTypeCommand>();
+            services.AddTransient<IUpdateRoleCommand, EfUpdateRoleCommand>();
+            services.AddTransient<IUpdateUserCommand, EfUpdateUserCommand>();
+
+
             services.AddTransient<IUseCaseLogger, DatabaseUseCaseLogger>();
             services.AddHttpContextAccessor();
             services.AddTransient<IApplicationActor>(x =>
@@ -64,10 +108,32 @@ namespace DentaCare.Api
                 return actor;
             });
             services.AddControllers();
+
             services.AddAutoMapper(this.GetType().Assembly);
+            services.AddAutoMapper(typeof(RoleProfile).Assembly);// nisam siguran dal treba za sve ovako...
+
             services.AddTransient<CreateRoleValidator>();
-            services.AddTransient<UpdateRoleValidator>();
             services.AddTransient<CreateUserValidator>();
+            services.AddTransient<CreateAppointmentValidator>();
+            services.AddTransient<CreateContactValidator>();
+            services.AddTransient<CreateDentistValidator>();
+            services.AddTransient<CreateJawValidator>();
+            services.AddTransient<CreateJawSideValidator>();
+            services.AddTransient<CreateEKartonValidator>();
+            services.AddTransient<CreateServiceTypeValidator>();
+            services.AddTransient<UpdateTeethValidator>();
+
+            services.AddTransient<UpdateRoleValidator>();
+            services.AddTransient<UpdateUserValidator>();
+            services.AddTransient<UpdateAppointmentValidator>();
+            services.AddTransient<UpdateContactValidator>();
+            services.AddTransient<UpdateDentistValidator>();
+            services.AddTransient<UpdateJawValidator>();
+            services.AddTransient<UpdateJawSideValidator>();
+            services.AddTransient<UpdateServiceTypeValidator>();
+            services.AddTransient<UpdateEKartonValidator>();
+            services.AddTransient<UpdateTeethValidator>();
+            
             services.AddTransient<UseCaseExecutor>();
             services.AddTransient<JwtManager>();
             services.AddAuthentication(options =>
