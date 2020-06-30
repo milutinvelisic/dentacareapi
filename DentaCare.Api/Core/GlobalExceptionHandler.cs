@@ -52,7 +52,7 @@ namespace DentaCare.Api.Core
                     //    {
                     //        message = "Server Error."
                     //    };
-                        break;
+                    //      break;
                     case ValidationException validationException:
                         statusCode = StatusCodes.Status422UnprocessableEntity;
 

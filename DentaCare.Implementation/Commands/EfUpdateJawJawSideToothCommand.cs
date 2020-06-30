@@ -21,7 +21,7 @@ namespace DentaCare.Implementation.Commands
 
         public void Execute(JawJawSideToothDto request)
         {
-            _validator.ValidateAndThrow(request);
+            
 
             var jawSide = _context.JawJawSideTeeth.Find(request.Id);
 
