@@ -1,13 +1,12 @@
-﻿using System;
+﻿using DentaCare.Application.Queries;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DentaCare.Application.DataTransfer
+namespace DentaCare.Application.Searches
 {
-    public class AppointmentDto
+    public class AppointmentSearch : PagedSearch
     {
-        public int Id { get; set; }
-
         public string FirstNameLastName { get; set; }
 
         public string Email { get; set; }
@@ -17,9 +16,5 @@ namespace DentaCare.Application.DataTransfer
         public DateTime Time { get; set; }
 
         public string Phone { get; set; }
-
-        public virtual ServiceTypeDto ServiceTypes { get; set; }
-
-        public int? ServiceTypeId { get; set; }
     }
 }

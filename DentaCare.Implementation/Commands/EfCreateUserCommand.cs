@@ -10,12 +10,12 @@ using FluentValidation;
 
 namespace DentaCare.Implementation.Commands
 {
-    public class EfRegisterUserCommand : IRegisterUserCommand
+    public class EfCreateUserCommand : ICreateUserCommand
     {
         private readonly DentaCareContext _context;
-        private readonly RegisterUserValidator _validator;
+        private readonly CreateUserValidator _validator;
 
-        public EfRegisterUserCommand(DentaCareContext context, RegisterUserValidator validator)
+        public EfCreateUserCommand(DentaCareContext context, CreateUserValidator validator)
         {
             this._context = context;
             this._validator = validator;
@@ -24,7 +24,7 @@ namespace DentaCare.Implementation.Commands
 
         public string Name => "Register user using EF";
 
-        public void Execute(RegisterUserDto request)
+        public void Execute(UserDto request)
         {
             _validator.ValidateAndThrow(request);
 

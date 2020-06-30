@@ -9,29 +9,29 @@ using DentaCareDataAccess;
 
 namespace DentaCare.Implementation.Commands
 {
-    public class EfCreateEKartonCommand : ICreateEKartonCommand
+    public class EfCreateDentistCommand : ICreateDentistCommand
     {
         private readonly DentaCareContext _context;
         private readonly IMapper _mapper;
 
-        public EfCreateEKartonCommand(DentaCareContext context, IMapper mapper)
+        public EfCreateDentistCommand(DentaCareContext context, IMapper mapper)
         {
             this._context = context;
             this._mapper = mapper;
         }
-        public int Id => 10;
+        public int Id => 9;
 
-        public string Name => "Create EKarton with Ef";
+        public string Name => "Create Dentist using EF";
 
-        public void Execute(EKartonDto request)
+        public void Execute(DentistDto request)
         {
-            var ekarton = new EKarton
+            var dentist = new Dentist
             {
-                Date = request.Date,
-                Price = request.Price
+                FirstName = request.FirstName,
+                LastName = request.LastName
             };
 
-            _context.EKarton.Add(ekarton);
+            _context.Dentists.Add(dentist);
             _context.SaveChanges();
         }
     }

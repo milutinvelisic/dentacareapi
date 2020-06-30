@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DentaCare.Application.Queries;
 
-namespace DentaCare.Application.DataTransfer
+namespace DentaCare.Application.Searches
 {
-    public class ContactDto : EntityBaseDto
+    public class ContactSearch : PagedSearch
     {
-
-        public int Id { get; set; }
-
         public string Address { get; set; }
 
         public string Phone { get; set; }
@@ -16,6 +14,5 @@ namespace DentaCare.Application.DataTransfer
         public string Fax { get; set; }
 
         public string Email { get; set; }
-
     }
 }

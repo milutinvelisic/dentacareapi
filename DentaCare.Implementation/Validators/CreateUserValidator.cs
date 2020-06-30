@@ -8,11 +8,11 @@ using FluentValidation;
 
 namespace DentaCare.Implementation.Validators
 {
-    public class RegisterUserValidator: AbstractValidator<RegisterUserDto>
+    public class CreateUserValidator: AbstractValidator<UserDto>
     {
         private readonly DentaCareContext _context;
 
-        public RegisterUserValidator(DentaCareContext context)
+        public CreateUserValidator(DentaCareContext context)
         {
             this._context = context;
 

@@ -24,7 +24,7 @@ namespace DentaCare.Api.Controllers
         [HttpPost]
         public void Post(
             [FromBody] RegisterUserDto dto,
-            [FromServices] IRegisterUserCommand command)
+            [FromServices] ICreateUserCommand command)
         {
             _executor.ExecuteCommand(command, dto);
         }

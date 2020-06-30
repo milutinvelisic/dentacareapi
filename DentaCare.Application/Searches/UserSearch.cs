@@ -1,18 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DentaCare.Application.Queries;
 
-namespace DentaCare.Application.DataTransfer
+namespace DentaCare.Application.Searches
 {
-    public class UserDto
+    public class UserSearch : PagedSearch
     {
-        public int Id { get; set; }
         public string FirstName { get; set; }
+
         public string LastName { get; set; }
+
         public string Email { get; set; }
-        public string Password { get; set; }
+
         public string Phone { get; set; }
+
         public int RoleId { get; set; }
-        public virtual RoleDto Role { get; set; }
+
+        public int EKartonId { get; set; }
     }
 }

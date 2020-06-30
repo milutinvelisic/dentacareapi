@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DentaCare.Application.Queries;
 
-namespace DentaCare.Application.DataTransfer
+namespace DentaCare.Application.Searches
 {
-    public class DentistDto : EntityBaseDto
+    public class DentistSearch : PagedSearch
     {
-
-        public int Id { get; set; }
-
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
-
     }
 }

@@ -42,7 +42,7 @@ namespace DentaCare.Api
             services.AddTransient<DentaCareContext>();
             services.AddTransient<ICreateRoleCommand, EfCreateRoleCommand>();// ili RawSqlCreateRoleCommand
             services.AddTransient<IDeleteRoleCommand, EfDeleteRoleCommand>();
-            services.AddTransient<IRegisterUserCommand, EfRegisterUserCommand>();
+            services.AddTransient<ICreateUserCommand, EfCreateUserCommand>();
             services.AddTransient<IGetRoleQuery, EfGetRolesQuery>();
             services.AddTransient<IUseCaseLogger, DatabaseUseCaseLogger>();
             services.AddHttpContextAccessor();
@@ -67,7 +67,7 @@ namespace DentaCare.Api
             services.AddAutoMapper(this.GetType().Assembly);
             services.AddTransient<CreateRoleValidator>();
             services.AddTransient<UpdateRoleValidator>();
-            services.AddTransient<RegisterUserValidator>();
+            services.AddTransient<CreateUserValidator>();
             services.AddTransient<UseCaseExecutor>();
             services.AddTransient<JwtManager>();
             services.AddAuthentication(options =>

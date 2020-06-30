@@ -2,13 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using DentaCare.Application.Queries;
 
-namespace DentaCare.Application.DataTransfer
+namespace DentaCare.Application.Searches
 {
-    public class EKartonDto : EntityBaseDto
+    public class EKartonSearch : PagedSearch
     {
-        public int Id { get; set; }
-
         public DateTime Date { get; set; }
 
         public decimal Price { get; set; }
@@ -20,11 +19,5 @@ namespace DentaCare.Application.DataTransfer
         public int JawJawSideToothId { get; set; }
 
         public JawJawSideToothDto JawJawSideTooth { get; set; }
-
-        public int UserId { get; set; }
-
-        public UserDto User { get; set; }
-
-        public virtual ICollection<UserDto> Users { get; set; } = new HashSet<UserDto>();
     }
 }

@@ -31,7 +31,9 @@ namespace DentaCare.Implementation.Commands
                 throw new EntityNotFoundException(id, typeof(Role));
             }
 
-            _context.Roles.Remove(role);
+            role.IsDeleted = true;
+            role.DeletedAt = DateTime.UtcNow;
+            role.IsActive = false;
             _context.SaveChanges();
         }
     }
