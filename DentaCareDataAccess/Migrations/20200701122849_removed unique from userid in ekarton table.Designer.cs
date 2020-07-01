@@ -4,14 +4,16 @@ using DentaCareDataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DentaCareDataAccess.Migrations
 {
     [DbContext(typeof(DentaCareContext))]
-    partial class DentaCareContextModelSnapshot : ModelSnapshot
+    [Migration("20200701122849_removed unique from userid in ekarton table")]
+    partial class removeduniquefromuseridinekartontable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

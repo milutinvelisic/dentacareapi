@@ -13,7 +13,6 @@ namespace DentaCareDataAccess.Configurations
         {
             builder.Property(x => x.Date).IsRequired();
             builder.Property(x => x.Price).IsRequired();
-            //builder.HasIndex(x => x.UserId).IsUnique();
 
             
         }
