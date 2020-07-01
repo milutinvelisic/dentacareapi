@@ -169,6 +169,10 @@ namespace DentaCare.Api
 
             app.UseRouting();
 
+            app.UseStaticFiles();
+
+            app.UseMiddleware<GlobalExceptionHandler>();
+
             app.UseAuthentication();
 
             app.UseAuthorization();

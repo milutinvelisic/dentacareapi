@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using DentaCare.Application;
 using DentaCare.Application.Commands;
 using DentaCare.Application.DataTransfer;
+using DentaCare.Application.Email;
+using DentaCare.Implementation.Validators;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -16,8 +18,13 @@ namespace DentaCare.Api.Controllers
     public class RegisterController : ControllerBase
     {
         private readonly UseCaseExecutor _executor;
+        private readonly IEmailSender _email;
 
-        public RegisterController(UseCaseExecutor executor) => _executor = executor;
+        public RegisterController(UseCaseExecutor executor, IEmailSender email)
+        {
+            _executor = executor;
+            _email = email;
+        }
 
 
         // POST: api/Register
